@@ -130,6 +130,14 @@ h4 {
   margin: 0;
 }
 
+.dropdown-menu {
+  background-color: var(--color-texto);
+}
+
+.dropdown-item:hover {
+  background-color: #464646;
+}
+
 .navbar-toggler-icon {
   filter: invert(100%);
 }
