@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-primario: #ffa500; /* Amarillo JS */
+  --color-secundario: #222; /* Negro oscuro para contraste */
+  --color-fondo: #464646; /* Gris claro, para fondo limpio */
+  --color-texto: #333; /* Texto oscuro para legibilidad */
+  --color-acento: #f7df1e; /* Naranja para botones y elementos destacados */
+}
+
+body {
+  background-color: var(--color-fondo);
+  padding-bottom: 4rem;
+  font-family: Roboto;
+}
+
+.nav-item a {
+  font-family: IBM Plex Sans;
+  color: white;
+  text-underline-offset: 4px;
+  font-size: 1rem;
+}
+
+.nav-item a:focus,
+.nav-item a:active,
+.nav-item a:hover {
+  color: var(--color-primario) !important;
+  text-decoration: underline;
+}
+
+.ini a:visited,
+.ini a:focus,
+.ini a:active,
+.ini a:hover {
+  color: white !important;
+}
+
+#boton-inicio {
+  position: fixed;
+  min-width: 5rem;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: var(--color-primario);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+#boton-inicio:hover {
+  background-color: black;
+  color: var(--color-primario);
+  transform: scale(1.1);
+}
+
+input {
+  outline: none; /* Quita el borde azul al hacer clic */
+  border: none; /* Elimina el borde normal */
+}
+
+/* Para navegadores Webkit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-texto);
+  color: whitesmoke;
+}
+
+.navbar {
+  background-color: #222;
+  color: white;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.res label,
+p {
+  color: var(--color-primario);
+  font-family: IBM Plex Sans !important;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  font-family: IBM Plex Sans;
+  font-weight: bold;
+  color: var(--color-primario);
+  text-align: center;
+  margin: 0;
+}
+h4 {
+  color: white;
+}
+
+.pblanco {
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.nombre {
+  font-family: IBM Plex Sans;
+  color: var(--color-primario);
+  text-align: center;
+  margin: 0;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+.navbar-collapse .navbar-nav .nav-item {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  /* Aplica solo en móviles */
+  .navbar-collapse .navbar-nav .nav-item {
+    margin-left: 3rem;
+  }
+}
+
+pre {
+  background-color: #222222;
+  color: rgb(109, 222, 94);
+  padding: 0;
+  font-family: Roboto Mono !important;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  max-width: 90%;
+}
+
+code {
+  display: block;
+  white-space: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.res span {
+  font-family: Roboto !important;
+  color: white;
+}
+
+h6 {
+  color: white;
+  text-align: left;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
