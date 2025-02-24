@@ -72,7 +72,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#cambiarimg" role="button">
+            <a class="nav-link" href="calculadora.html" role="button">
               Calculadora
             </a>
           </li>
@@ -90,42 +90,19 @@
         <h2>Cambiar imágenes</h2>
         <br />
 
-        <h2>Selecciona una imagen</h2>
-        <select id="selectorImagen" onchange="cambiarImagen2()">
+        <p>Selecciona un nombre de la lista para conocer al gatito</p>
+        <select
+          class="form-select"
+          id="selectorImagen"
+          onchange="cambiarImagen2()">
           <option value="/img/faru.png">Farú</option>
           <option value="/img/lyla.png">Lyla</option>
           <option value="/img/mincho.png">Mincho</option>
           <option value="/img/blue.png">Blue</option>
+          <option value="/img/paco.png">Paco</option>
         </select>
 
         <img id="miImagen2" src="/img/faru.png" alt="Imagen Seleccionada" />
-
-        <pre class="rounded px-4">
-             <h6>Código utilizado:</h6>
-            <code>
-function fibonacci(n) {
-  if (n < 0) return "Número inválido";
-  if (n === 0) return 0;
-  if (n === 1) return 1;
-                    
-  let a = 0,
-    b = 1,
-    temp;
-    for (let i = 2; i <= n; i++) {
-    temp = a + b;
-    a = b;
-    b = temp;
-    }
-    return b;
-}
-                    
-function calcularFibonacci() {
-    let numero = parseInt(document.getElemen("numero").value);
-    let resultado = fibonacci(numero);
-    document.getElementById("resultatextContent = resultado;
-}
-            </code>
-          </pre>
       </div>
     </section>
 

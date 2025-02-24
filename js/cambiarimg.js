@@ -1,3 +1,9 @@
+function cambiarImagen2() {
+  let selector = document.getElementById("selectorImagen");
+  let imagen = document.getElementById("miImagen2");
+  imagen.src = selector.value;
+}
+
 function cambiarImagen() {
   //lectura de la imagen inicial
   let imagen = document.getElementById("miImagen");
@@ -8,10 +14,4 @@ function cambiarImagen() {
   } else {
     imagen.src = "/img/faru.png";
   }
-}
-
-function cambiarImagen2() {
-  let selector = document.getElementById("selectorImagen");
-  let imagen = document.getElementById("miImagen2");
-  imagen.src = selector.value;
 }
