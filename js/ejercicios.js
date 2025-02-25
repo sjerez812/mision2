@@ -1,3 +1,18 @@
+//reloj
+function actualizarHora() {
+  let ahora = new Date();
+  let horas = ahora.getHours().toString().padStart(2, "0");
+  let minutos = ahora.getMinutes().toString().padStart(2, "0");
+  let segundos = ahora.getSeconds().toString().padStart(2, "0");
+
+  let horaFormateada = `${horas}:${minutos}:${segundos}`;
+  document.getElementById("reloj").textContent = horaFormateada;
+}
+
+setInterval(actualizarHora, 1000);
+
+actualizarHora();
+
 //fibonacci
 function fibonacci(n) {
   if (n < 0) return "Número inválido";
@@ -63,6 +78,21 @@ function calcularFactorial() {
   document.getElementById("resultadof").textContent = factorial(numero);
 }
 
+//función suma
+function sumarNumeros() {
+  let nume1 = parseFloat(document.getElementById("numero1s").value);
+  let nume2 = parseFloat(document.getElementById("numero2s").value);
+
+  if (isNaN(nume1) || isNaN(nume2)) {
+    document.getElementById("resultadoSuma").textContent =
+      "Ingresa números válidos.";
+    return;
+  }
+
+  let suma = nume1 + nume2;
+  document.getElementById("resultadoSuma").textContent = suma;
+}
+
 // Cálculo de operaciones básicas
 function calcularOperaciones() {
   let numbob1 = parseFloat(document.getElementById("numob1").value);
@@ -109,19 +139,3 @@ function encontrarMayor() {
 
   document.getElementById("mayorr").textContent = "El mayor es: " + mayor;
 }
-
-function actualizarHora() {
-  let ahora = new Date();
-  let horas = ahora.getHours().toString().padStart(2, "0");
-  let minutos = ahora.getMinutes().toString().padStart(2, "0");
-  let segundos = ahora.getSeconds().toString().padStart(2, "0");
-
-  let horaFormateada = `${horas}:${minutos}:${segundos}`;
-  document.getElementById("reloj").textContent = horaFormateada;
-}
-
-// Actualiza la hora cada segundo
-setInterval(actualizarHora, 1000);
-
-// Llamar la función inmediatamente para evitar el retraso inicial
-actualizarHora();

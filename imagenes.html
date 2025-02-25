@@ -94,10 +94,14 @@
 
     <section id="imgs">
       <div class="container py-5 rounded-3">
-        <h2>Cambiar imágenes</h2>
+        <h2>Cambiar imágenes desde una lista</h2>
         <br />
 
-        <p>Selecciona un nombre de la lista para conocer al gatito</p>
+        <p>
+          <center>
+            Selecciona un nombre de la lista para conocer al gatito
+          </center>
+        </p>
         <select
           class="form-select"
           id="selectorImagen"
@@ -110,6 +114,22 @@
         </select>
 
         <img id="miImagen2" src="/img/faru.png" alt="Imagen Seleccionada" />
+      </div>
+    </section>
+
+    <section id="imgsclic">
+      <div class="container py-5 rounded-3">
+        <h2>Cambiar imágenes con un clic</h2>
+        <br />
+
+        <p>
+          <center>Da clic sobre la imagen para hacer bailar al gatito</center>
+        </p>
+        <img
+          id="miImagen"
+          src="/img/happy1.png"
+          alt="Imagen 1"
+          onclick="cambiarImagenClic()" />
       </div>
     </section>
 
