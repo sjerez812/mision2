@@ -139,3 +139,73 @@ function encontrarMayor() {
 
   document.getElementById("mayorr").textContent = "El mayor es: " + mayor;
 }
+
+//múltiplo 3 y 5
+function multiploTresCinco() {
+  let num = parseInt(document.getElementById("numero35").value);
+  let resultadoTexto = document.getElementById("resultado35");
+
+  if (isNaN(num)) {
+    resultadoTexto.textContent = "Por favor, ingresa un número válido.";
+    resultadoTexto.style.color = "red";
+    return;
+  }
+
+  if (num % 3 === 0 && num % 5 === 0) {
+    resultadoTexto.textContent = num + " es múltiplo de 3 y 5 al mismo tiempo.";
+    resultadoTexto.style.color = "green";
+  } else {
+    resultadoTexto.textContent =
+      num + " no es múltiplo de 3 y 5 al mismo tiempo";
+  }
+}
+
+//divisores exactos
+function encontrarDivisores() {
+  let num = parseInt(document.getElementById("numerodiv").value);
+  let resultadoTexto = document.getElementById("resultadodiv");
+
+  if (isNaN(num) || num <= 0) {
+    resultadoTexto.textContent =
+      "Por favor, ingresa un número entero positivo.";
+    resultadoTexto.style.color = "red";
+    return;
+  }
+
+  let divisores = [];
+  for (let i = 1; i <= num; i++) {
+    if (num % i === 0) {
+      divisores.push(i);
+    }
+  }
+
+  resultadoTexto.textContent =
+    "Los divisores de " + num + " son: " + divisores.join(", ");
+}
+
+//primo o no
+function esPrimo(num) {
+  if (num < 2) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function verificarPrimo() {
+  let num = parseInt(document.getElementById("numerop").value);
+  let resultadoTexto = document.getElementById("resultadop");
+
+  if (isNaN(num) || num <= 0) {
+    resultadoTexto.textContent = "Por favor, ingresa un número entero positivo";
+    return;
+  }
+
+  if (esPrimo(num)) {
+    resultadoTexto.textContent = num + " es un número primo";
+  } else {
+    resultadoTexto.textContent = num + " no es un número primo";
+  }
+}

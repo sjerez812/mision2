@@ -9,7 +9,7 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/estilosproyecto.css" />
+  
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -40,7 +40,7 @@
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
-              href="#"
+              href="index.html"
               id="navbarNumericos"
               role="button"
               data-bs-toggle="dropdown"
@@ -52,13 +52,38 @@
               <li><a class="dropdown-item" href="#ordenar">Ordenador</a></li>
               <li><a class="dropdown-item" href="#factorial">Factorial</a></li>
               <li>
+                <a class="dropdown-item" href="#suma">Suma</a>
+              </li>
+
+              <li>
                 <a class="dropdown-item" href="#operaciones">Operaciones</a>
               </li>
+
               <li>
                 <a class="dropdown-item" href="#elmayor">Encontrar el mayor</a>
               </li>
-            </ul>
+
+              <li>
+                <a class="dropdown-item" href="#multiplo35"
+                  >Múltiplos de 3 y 5</a
+                >
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="#divisores">Divisores</a>
+              </li>
+            
           </li>
+
+          <li>
+            <a class="dropdown-item" href="#primos">Primos</a>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#promedio">Promedio</a>
+          </li>
+        </ul>
+      </li>
 
           <li class="nav-item">
             <a class="nav-link" href="/imagenes.html" role="button">
@@ -67,7 +92,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#cambiarimg" role="button">
+            <a class="nav-link" href="calculadora.html" role="button">
               Calculadora
             </a>
           </li>
@@ -392,11 +417,154 @@ function encontrarMayor() {
       </div>
     </section>
 
+    <section id="multiplo35">
+      <div class="container py-5 rounded-3">
+        <h2>Múltiplo de 3 y 5</h2>
+        <p>Escribe un número para saber si es múltiplo de 3 y 5 al tiempo</p>
+        <br />
+
+        <div class="d-flex align-items-center gap-2 res">
+          <input
+            class="rounded border form-control"
+            type="number"
+            id="numero35"
+            min="0" />
+          <button class="btn btn-warning" onclick="multiploTresCinco()">
+            Verificar
+          </button>
+        </div>
+        <p class="res py-4 m-0">Resultado: <span id="resultado35"></span></p>
+
+        <pre class="rounded px-4">
+             <h6>Código utilizado:</h6>
+            <code>
+function multiploTresCinco() {
+  let num = parseInt(document.getElem("numero35").value);
+  let resultadoTexto = document.getElem("resultado35");
+              
+  if (isNaN(num)) {
+    resultadoTexto.textContent = "Por favor, iun número válido.";
+    resultadoTexto.style.color = "red";
+    return;
+  }
+              
+  if (num % 3 === 0 && num % 5 === 0) {
+    resultadoTexto.textContent = num + " es múde 3 y 5 al mismo tiempo.";
+    resultadoTexto.style.color = "green";
+  } else {
+    resultadoTexto.textContent =
+      num + " NO es múltiplo de 3 y 5 altiempo";
+  }
+}
+            </code>
+          </pre>
+      </div>
+    </section>
+
+    <section id="divisores">
+      <div class="container py-5 rounded-3">
+        <h2>Divisores exactos</h2>
+        <p>Escribe un número para encontrar sus divisores exactos</p>
+        <br />
+
+        <div class="d-flex align-items-center gap-2 res">
+          <input
+            class="rounded border form-control"
+            type="number"
+            id="numerodiv"
+            min="0" />
+          <button class="btn btn-warning" onclick="encontrarDivisores()">
+            Calcular
+          </button>
+        </div>
+        <p class="res py-4 m-0">Resultado: <span id="resultadodiv"></span></p>
+
+        <pre class="rounded px-4">
+             <h6>Código utilizado:</h6>
+            <code>
+function encontrarDivisores() {
+  let num = parseInt(document.getElem("numerodiv").value);
+  let resultadoTexto = document.getElem("resultadodiv");
+              
+  if (isNaN(num) || num <= 0) {
+    resultadoTexto.textContent =
+      "Por favor, ingresa un número entero positivo.";
+    resultadoTexto.style.color = "red";
+    return;
+  }
+              
+  let divisores = [];
+  for (let i = 1; i <= num; i++) {
+    if (num % i === 0) {
+      divisores.push(i);
+    }
+  }
+              
+  resultadoTexto.textContent =
+    "Los divisores de " + num + " son: " + divjoin(", ");
+}
+            </code>
+          </pre>
+      </div>
+    </section>
+
+    <section id="primos">
+      <div class="container py-5 rounded-3">
+        <h2>Números primos</h2>
+        <p>Escribe un número para determinar si es primo o no</p>
+        <br />
+
+        <div class="d-flex align-items-center gap-2 res">
+          <input
+            class="rounded border form-control"
+            type="number"
+            id="numerop"
+            min="0" />
+          <button class="btn btn-warning" onclick="verificarPrimo()()">
+            Verificar
+          </button>
+        </div>
+        <p class="res py-4 m-0">Resultado: <span id="resultadop"></span></p>
+
+        <pre class="rounded px-4">
+             <h6>Código utilizado:</h6>
+            <code>
+function esPrimo(num) {
+  if (num < 2) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+              
+function verificarPrimo() {
+  let num = parseInt(document.getElem("numerop").value);
+  let resultadoTexto = document.getElem("resultadop");
+              
+  if (isNaN(num) || num <= 0) {
+    resultadoTexto.textContent =
+      "Por favor, ingresa un número entero positivo";
+    return;
+  }
+              
+  if (esPrimo(num)) {
+    resultadoTexto.textContent = num + " es un primo";
+  } else {
+    resultadoTexto.textContent = num + " nonúmero primo";
+  }
+}
+            </code>
+          </pre>
+      </div>
+    </section>
+
     <a href="index.html" id="boton-inicio">↑ Ir al Inicio</a>
 
     <footer class="footer bg-dark text-white py-4">
       <div
-        class="container bg-dark d-flex flex-column flex-md-row align-items-center justify-content-between">
+        class="container bg-dark d-flex flex-column flex-md-row justify-content-between">
         <div class="footer-logo mb-3 mb-md-0">
           <img src="img/jslogo.png" alt="Logo" class="logo-footer" />
         </div>
@@ -425,6 +593,7 @@ function encontrarMayor() {
         </p>
       </div>
     </footer>
+
 
     <script src="js/ejercicios.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
