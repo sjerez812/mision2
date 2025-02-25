@@ -6,7 +6,7 @@
   --color-secundario: #222; /* Negro oscuro para contraste */
   --color-fondo: #464646; /* Gris claro, para fondo limpio */
   --color-texto: #333; /* Texto oscuro para legibilidad */
-  --color-acento: #f7df1e; /* Naranja para botones y elementos destacados */
+  --color-acento: #ffc107; /* Naranja para botones y elementos destacados */
 }
 
 body {
@@ -240,4 +240,5 @@ span {
 }
 .titp {
   color: var(--color-primario) !important;
+  margin: 0;
 }

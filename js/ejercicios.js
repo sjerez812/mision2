@@ -109,3 +109,19 @@ function encontrarMayor() {
 
   document.getElementById("mayorr").textContent = "El mayor es: " + mayor;
 }
+
+function actualizarHora() {
+  let ahora = new Date();
+  let horas = ahora.getHours().toString().padStart(2, "0");
+  let minutos = ahora.getMinutes().toString().padStart(2, "0");
+  let segundos = ahora.getSeconds().toString().padStart(2, "0");
+
+  let horaFormateada = `${horas}:${minutos}:${segundos}`;
+  document.getElementById("reloj").textContent = horaFormateada;
+}
+
+// Actualiza la hora cada segundo
+setInterval(actualizarHora, 1000);
+
+// Llamar la función inmediatamente para evitar el retraso inicial
+actualizarHora();
