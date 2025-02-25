@@ -62,3 +62,50 @@ function calcularFactorial() {
   }
   document.getElementById("resultadof").textContent = factorial(numero);
 }
+
+// Cálculo de operaciones básicas
+function calcularOperaciones() {
+  let numbob1 = parseFloat(document.getElementById("numob1").value);
+  let numbob2 = parseFloat(document.getElementById("numob2").value);
+
+  if (isNaN(numbob1) || isNaN(numbob2)) {
+    alert("Por favor, ingresa números válidos.");
+    return;
+  }
+
+  document.getElementById("suma").textContent = numbob1 + numbob2;
+  document.getElementById("resta").textContent = numbob1 - numbob2;
+  document.getElementById("multiplicacion").textContent = numbob1 * numbob2;
+  document.getElementById("division").textContent =
+    numbob2 !== 0 ? (numbob1 / numbob2).toFixed(2) : "Error (división por 0)";
+  document.getElementById("modulo").textContent =
+    numbob2 !== 0 ? numbob1 % numbob2 : "Error (módulo por 0)";
+  document.getElementById("raiz1").textContent =
+    numbob1 >= 0 ? Math.sqrt(numbob1).toFixed(2) : "Error (número negativo)";
+  document.getElementById("raiz2").textContent =
+    numbob2 >= 0 ? Math.sqrt(numbob2).toFixed(2) : "Error (número negativo)";
+  document.getElementById("potencia").textContent = numbob1 ** numbob2;
+}
+
+//encontrar el mayor
+function encontrarMayor() {
+  let n1 = parseFloat(document.getElementById("n1").value);
+  let n2 = parseFloat(document.getElementById("n2").value);
+  let n3 = parseFloat(document.getElementById("n3").value);
+
+  if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+    document.getElementById("mayorr").textContent =
+      "Por favor, ingresa tres números válidos.";
+    return;
+  }
+
+  if (n1 >= n2 && n1 >= n3) {
+    mayor = n1;
+  } else if (n2 >= n1 && n2 >= n3) {
+    mayor = n2;
+  } else {
+    mayor = n3;
+  }
+
+  document.getElementById("mayorr").textContent = "El mayor es: " + mayor;
+}
