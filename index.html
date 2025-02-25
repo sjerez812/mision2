@@ -111,8 +111,7 @@
       <div class="container py-5 rounded-3">
         <h2>Calculadora Fibonacci</h2>
         <p>
-          Escribe un número para calcular el valor de su posición en la serie
-          Fibonacci
+          Escribe una posición de la serie Fibonacci para calcular a qué número corresponde
         </p>
         <br />
 
@@ -238,7 +237,7 @@ function calcularFibonacci() {
     let numero = parseInt(document.getElementById("numerof").value);
     if (isNaN(numero)) {
         document.getElementById("resultado").textContent =
-        "Por favor, ingresa un número válido.";
+        "Por favor, ingresa un número válido";
         return;
     }
     document.getElementById("resultadof").textContent = factor(numero);
@@ -280,7 +279,7 @@ function calcularFibonacci() {
             
   if (isNaN(nume1) || isNaN(nume2)) {
     document.getElementById("resultadoStextContent =
-      "Ingresa números válidos.";
+      "Ingresa números válidos";
     return;
   }
             
@@ -333,7 +332,7 @@ function calcularFibonacci() {
   let numbob2 = parseFloat(document.getEleme("numob2").value);
             
   if (isNaN(numbob1) || isNaN(numbob2)) {
-    alert("Por favor, ingresa números válidos.");
+    alert("Por favor, ingresa números válidos");
     return;
   }
             
@@ -392,7 +391,7 @@ function calcularFibonacci() {
             
   if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
     document.getElementById("mayorr").textContent =
-      "Por favor, ingresa tres números válidos.";
+      "Por favor, ingresa tres números válidos";
     return;
   }
             
@@ -436,14 +435,12 @@ function calcularFibonacci() {
   let resultadoTexto = document.getElem("resultado35");
               
   if (isNaN(num)) {
-    resultadoTexto.textContent = "Por favor, iun número válido.";
-    resultadoTexto.style.color = "red";
+    resultadoTexto.textContent = "Por favor, ingresa un número válido";
     return;
   }
               
   if (num % 3 === 0 && num % 5 === 0) {
-    resultadoTexto.textContent = num + " es múde 3 y 5 al mismo tiempo.";
-    resultadoTexto.style.color = "green";
+    resultadoTexto.textContent = num + " es múde 3 y 5 al mismo tiempo";
   } else {
     resultadoTexto.textContent =
       num + " NO es múltiplo de 3 y 5 altiempo";
@@ -480,8 +477,7 @@ function calcularFibonacci() {
               
   if (isNaN(num) || num <= 0) {
     resultadoTexto.textContent =
-      "Por favor, ingresa un número entero positivo.";
-    resultadoTexto.style.color = "red";
+      "Por favor, ingresa un número entero positivo";
     return;
   }
               
@@ -583,7 +579,7 @@ let num2 = parseFloat(document.getElem("numpr2").value);
 let resultadoTexto = document.getElem("resultadopr");
             
 if (isNaN(num1) || isNaN(num2)) {
-  resultadoTexto.textContent = "Por favor, ingrenúmeros válidos.";
+  resultadoTexto.textContent = "Por favor, ingrenúmeros válidos";
             
   return;
 }

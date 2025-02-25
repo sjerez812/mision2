@@ -44,7 +44,7 @@ function ordenarNumeros() {
 
   if (num1 === "" || num2 === "" || num3 === "") {
     document.getElementById("resultado").textContent =
-      "Por favor, ingresa los tres números.";
+      "Por favor, ingresa los tres números";
     return;
   }
 
@@ -72,7 +72,7 @@ function calcularFactorial() {
   let numero = parseInt(document.getElementById("numerof").value);
   if (isNaN(numero)) {
     document.getElementById("resultado").textContent =
-      "Por favor, ingresa un número válido.";
+      "Por favor, ingresa un número válido";
     return;
   }
   document.getElementById("resultadof").textContent = factorial(numero);
@@ -85,7 +85,7 @@ function sumarNumeros() {
 
   if (isNaN(nume1) || isNaN(nume2)) {
     document.getElementById("resultadoSuma").textContent =
-      "Ingresa números válidos.";
+      "Ingresa números válidos";
     return;
   }
 
@@ -99,7 +99,7 @@ function calcularOperaciones() {
   let numbob2 = parseFloat(document.getElementById("numob2").value);
 
   if (isNaN(numbob1) || isNaN(numbob2)) {
-    alert("Por favor, ingresa números válidos.");
+    alert("Por favor, ingresa números válidos");
     return;
   }
 
@@ -125,7 +125,7 @@ function encontrarMayor() {
 
   if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
     document.getElementById("mayorr").textContent =
-      "Por favor, ingresa tres números válidos.";
+      "Por favor, ingresa tres números válidos";
     return;
   }
 
@@ -146,14 +146,12 @@ function multiploTresCinco() {
   let resultadoTexto = document.getElementById("resultado35");
 
   if (isNaN(num)) {
-    resultadoTexto.textContent = "Por favor, ingresa un número válido.";
-    resultadoTexto.style.color = "red";
+    resultadoTexto.textContent = "Por favor, ingresa un número válido";
     return;
   }
 
   if (num % 3 === 0 && num % 5 === 0) {
-    resultadoTexto.textContent = num + " es múltiplo de 3 y 5 al mismo tiempo.";
-    resultadoTexto.style.color = "green";
+    resultadoTexto.textContent = num + " es múltiplo de 3 y 5 al mismo tiempo";
   } else {
     resultadoTexto.textContent =
       num + " no es múltiplo de 3 y 5 al mismo tiempo";
@@ -166,9 +164,8 @@ function encontrarDivisores() {
   let resultadoTexto = document.getElementById("resultadodiv");
 
   if (isNaN(num) || num <= 0) {
-    resultadoTexto.textContent =
-      "Por favor, ingresa un número entero positivo.";
-    resultadoTexto.style.color = "red";
+    resultadoTexto.textContent = "Por favor, ingresa un número entero positivo";
+
     return;
   }
 
@@ -217,7 +214,7 @@ function calcularPromedio() {
   let resultadoTexto = document.getElementById("resultadopr");
 
   if (isNaN(num1) || isNaN(num2)) {
-    resultadoTexto.textContent = "Por favor, ingresa dos números válidos.";
+    resultadoTexto.textContent = "Por favor, ingresa dos números válidos";
 
     return;
   }
