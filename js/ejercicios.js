@@ -103,7 +103,7 @@ function calcularOperaciones() {
     return;
   }
 
-  document.getElementById("suma").textContent = numbob1 + numbob2;
+  document.getElementById("sumar").textContent = numbob1 + numbob2;
   document.getElementById("resta").textContent = numbob1 - numbob2;
   document.getElementById("multiplicacion").textContent = numbob1 * numbob2;
   document.getElementById("division").textContent =
@@ -137,7 +137,7 @@ function encontrarMayor() {
     mayor = n3;
   }
 
-  document.getElementById("mayorr").textContent = "El mayor es: " + mayor;
+  document.getElementById("mayorr").textContent = "El mayor es " + mayor;
 }
 
 //múltiplo 3 y 5
@@ -208,4 +208,20 @@ function verificarPrimo() {
   } else {
     resultadoTexto.textContent = num + " no es un número primo";
   }
+}
+
+//promedio
+function calcularPromedio() {
+  let num1 = parseFloat(document.getElementById("numpr1").value);
+  let num2 = parseFloat(document.getElementById("numpr2").value);
+  let resultadoTexto = document.getElementById("resultadopr");
+
+  if (isNaN(num1) || isNaN(num2)) {
+    resultadoTexto.textContent = "Por favor, ingresa dos números válidos.";
+
+    return;
+  }
+
+  let promedio = (num1 + num2) / 2;
+  resultadoTexto.textContent = "El promedio es: " + promedio.toFixed(2);
 }

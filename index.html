@@ -130,8 +130,7 @@
 
         <pre class="rounded px-4">
              <h6>Código utilizado:</h6>
-            <code>
-function fibonacci(n) {
+             <code>function fibonacci(n) {
   if (n < 0) return "Número inválido";
   if (n === 0) return 0;
   if (n === 1) return 1;
@@ -183,12 +182,11 @@ function calcularFibonacci() {
           </button>
         </div>
 
-        <p class="res py-4 m-0">Ordenado: <span id="ordenados"></span></p>
+        <p class="res py-4 m-0">Ordenados: <span id="ordenados"></span></p>
 
         <pre class="rounded px-4">
           <h6>Código utilizado:</h6>
-          <code>
-    function ordenarNumeros() {
+          <code>function ordenarNumeros() {
         let num1 = document.getElementById("num1").value;
         let num2 = document.getElementById("num2").value;
         let num3 = document.getElementById("num3").value;
@@ -227,8 +225,7 @@ function calcularFibonacci() {
 
         <pre class="rounded px-4">
         <h6>Código utilizado:</h6>
-        <code>
-function factorial(n) {
+        <code>function factorial(n) {
     if (n < 0) return "Número inválido";
     let resultado = 1;
     for (let i = 1; i <= n; i++) {
@@ -277,8 +274,7 @@ function factorial(n) {
 
         <pre class="rounded px-4">
           <h6>Código utilizado:</h6>
-          <code>
-function sumarNumeros() {
+          <code>function sumarNumeros() {
   let nume1 = parseFloat(document.getEleme("numero1s").value);
   let nume2 = parseFloat(document.getEleme("numero2s").value);
             
@@ -319,7 +315,7 @@ function sumarNumeros() {
         </div>
 
         <div class="text-start py-4 m-0">
-          <p class="titp">Suma: <span id="suma"></span></p>
+          <p class="titp">Suma: <span id="sumar"></span></p>
           <p class="titp">Resta: <span id="resta"></span></p>
           <p class="titp">Multiplicación: <span id="multiplicacion"></span></p>
           <p class="titp">División: <span id="division"></span></p>
@@ -332,8 +328,7 @@ function sumarNumeros() {
         </div>
         <pre class="rounded px-4">
           <h6>Código utilizado:</h6>
-          <code>
-function calcularOperaciones() {
+          <code>function calcularOperaciones() {
   let numbob1 = parseFloat(document.getEleme("numob1").value);
   let numbob2 = parseFloat(document.getEleme("numob2").value);
             
@@ -342,7 +337,7 @@ function calcularOperaciones() {
     return;
   }
             
-  document.getElementById("suma").textContent = numbnumbob2;
+  document.getElementById("sumar").textContent = numbnumbob2;
   document.getElementById("resta").textContent = numbnumbob2;
   document.getElementById("multiplicacion").textContnumbob1 * numbob2;
   document.getElementById("division").textContent =
@@ -390,8 +385,7 @@ function calcularOperaciones() {
 
         <pre class="rounded px-4">
           <h6>Código utilizado:</h6>
-          <code>
-function encontrarMayor() {
+          <code>function encontrarMayor() {
   let n1 = parseFloat(document.getElementById("n1").value);
   let n2 = parseFloat(document.getElementById("n2").value);
   let n3 = parseFloat(document.getElementById("n3").value);
@@ -437,8 +431,7 @@ function encontrarMayor() {
 
         <pre class="rounded px-4">
              <h6>Código utilizado:</h6>
-            <code>
-function multiploTresCinco() {
+            <code>function multiploTresCinco() {
   let num = parseInt(document.getElem("numero35").value);
   let resultadoTexto = document.getElem("resultado35");
               
@@ -481,8 +474,7 @@ function multiploTresCinco() {
 
         <pre class="rounded px-4">
              <h6>Código utilizado:</h6>
-            <code>
-function encontrarDivisores() {
+            <code>function encontrarDivisores() {
   let num = parseInt(document.getElem("numerodiv").value);
   let resultadoTexto = document.getElem("resultadodiv");
               
@@ -528,8 +520,7 @@ function encontrarDivisores() {
 
         <pre class="rounded px-4">
              <h6>Código utilizado:</h6>
-            <code>
-function esPrimo(num) {
+            <code>function esPrimo(num) {
   if (num < 2) return false;
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) {
@@ -560,6 +551,50 @@ function verificarPrimo() {
       </div>
     </section>
 
+    <section id="promedio">
+      <div class="container py-5 rounded-3">
+        <h2>Promedio</h2>
+        <p>Escribe 2 números para calcular su promedio</p>
+
+        <div class="row justify-content-center g-3 text-center px-4">
+          <div class="col-6 col-md-4 col-lg-3">
+            <label for="num1">Número 1:</label>
+            <input type="number" id="numpr1" class="form-control" />
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <label for="num2">Número 2:</label>
+            <input type="number" id="numpr2" class="form-control" />
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <button class="btn btn-warning mb-2" onclick="calcularPromedio()">
+           Calcular
+          </button>
+        </div>
+
+        <p class="res py-4 m-0">Resultado: <span id="resultadopr"></span></p>
+
+        <pre class="rounded px-4">
+          <h6>Código utilizado:</h6>
+          <code>function calcularPromedio() {
+let num1 = parseFloat(document.getElem("numpr1").value);
+let num2 = parseFloat(document.getElem("numpr2").value);
+let resultadoTexto = document.getElem("resultadopr");
+            
+if (isNaN(num1) || isNaN(num2)) {
+  resultadoTexto.textContent = "Por favor, ingrenúmeros válidos.";
+            
+  return;
+}
+            
+let promedio = (num1 + num2) / 2;
+resultadoTexto.textContent = "El promedio epromedio.toFixed(2);}   
+          </code>
+        </pre>
+      </div>
+    </section>
+
     <a href="index.html" id="boton-inicio">↑ Ir al Inicio</a>
 
     <footer class="footer bg-dark text-white py-4">
@@ -582,7 +617,7 @@ function verificarPrimo() {
             >
           </li>
           <li>
-            <a href="calc.html" class="text-white text-decoration-none"
+            <a href="calculadora.html" class="text-white text-decoration-none"
               >Calculadora</a
             >
           </li>
